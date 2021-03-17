@@ -24,7 +24,7 @@ const educationItem = () => {
 }
 
 const mapStateToProps = () => {
-
+    
 }
 
 export default connect(mapStateToProps)(educationItem);

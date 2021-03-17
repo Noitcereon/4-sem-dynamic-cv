@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import CV from './CV'
 
 class App extends Component {
 
