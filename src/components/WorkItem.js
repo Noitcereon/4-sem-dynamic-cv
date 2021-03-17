@@ -20,10 +20,10 @@ const workItem = () => {
                 </ul>
             </div>
         </div>
-}
+    )};
 
-const mapStateToProps = () => {
-
+const mapStateToProps = (state) => {
+    
 }
 
 export default connect(mapStateToProps)(workItem);
