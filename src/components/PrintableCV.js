@@ -4,7 +4,7 @@ import SideBar from './SideBar';
 import WorkItem from './WorkItem';
 import EducationItem from './EducationItem';
 
-class CV extends Component {
+class PrintableCV extends Component {
     render() {
         return (
             <div className="row">
@@ -24,7 +24,6 @@ class CV extends Component {
                     <section>
                         <div className="row main-header">
                             <h2>Work Experience</h2> 
-                            <button className="btn btn-primary">+</button>
                         </div>
                         {/* Retrieve WorkItems from database. (the WorkItems below simulates it) */}
                         <WorkItem />
@@ -40,6 +39,6 @@ const mapStateToProps = () => {
 
 }
 
-export default connect(mapStateToProps)(CV);
+export default connect(mapStateToProps)(PrintableCV);
 
 
