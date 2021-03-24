@@ -17,4 +17,3 @@ export const fetchPersonalItems = () => async dispatch => {
     dispatch({ type: "FETCH_PERSONAL_ITEMS", payload: respose.data })
 };
 
-// export default fetchEducationItems
