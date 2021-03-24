@@ -13,7 +13,7 @@ export const fetchWorkItems = () => async dispatch => {
 };
 
 export const fetchPersonalItems = () => async dispatch => {
-    const respose = await cvApi.get("CVItems/Personal/1");
+    const respose = await cvApi.get("Personal/1");
     dispatch({ type: "FETCH_PERSONAL_ITEMS", payload: respose.data })
 };
 
