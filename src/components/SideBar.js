@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import ContactInfo from "./ContactInfo";
 
 class SideBar extends Component {
     render() {

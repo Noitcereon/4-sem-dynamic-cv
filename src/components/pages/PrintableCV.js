@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import SideBar from './SideBar';
-import WorkItem from './WorkItem';
-import EducationItem from './EducationItem';
+import SideBar from '../SideBar';
+import WorkItem from '../WorkItem';
+import EducationItem from '../EducationItem';
+// import {fetchEducationItems} from '../../actions';
 
 class PrintableCV extends Component {
     render() {

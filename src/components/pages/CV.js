@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import SideBar from './SideBar';
-import WorkItem from './WorkItem';
-import EducationItem from './EducationItem';
-import {fetchEducationItems} from '../actions';
+import SideBar from '../SideBar';
+import WorkItem from '../WorkItem';
+import EducationItem from '../EducationItem';
+import { fetchEducationItems } from '../../actions';
 
 class CV extends Component {
     componentDidMount() {
@@ -43,9 +43,9 @@ class CV extends Component {
 }
 
 const mapStateToProps = state => {
-    return {EducationItems :state.EducationItems};
+    return { EducationItems: state.EducationItems };
 }
 
-export default connect(mapStateToProps, {fetchEducationItems})(CV);
+export default connect(mapStateToProps, { fetchEducationItems })(CV);
 
 
