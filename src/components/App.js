@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
-import CV from './CV';
-import PrintableCV from "./PrintableCV";
+import CV from './pages/CV';
+import PrintableCV from "./pages/PrintableCV";
 
 
 class App extends Component {
@@ -11,13 +11,13 @@ class App extends Component {
             <BrowserRouter>
                 <div className="container">
                     <Switch>
-                        <Route exact path="/" component={CV} />
-                        <Route path="/printable_cv" component={PrintableCV} />
+                        <Route exact path="/pages/" component={CV} />
+                        <Route path="/pages/printable_cv" component={PrintableCV} />
                     </Switch>
 
                     <footer>
-                        <Link to="/">Manage CV</Link>
-                        <Link to="/printable_cv">Show Printable Version</Link>
+                        <Link to="/pages/">Manage CV</Link>
+                        <Link to="/pages/printable_cv">Show Printable Version</Link>
                     </footer>
                 </div>
             </BrowserRouter>
