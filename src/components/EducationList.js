@@ -16,8 +16,8 @@ class EducationList extends Component {
                             return <EducationItem key={education.id} title={education.title}
                                 location={education.location}
                                 description={education.description}
-                                dateFrom={education.dateFrom}
-                                dateTo={education.dateTo} />
+                                dateFrom={education.dateFromString}
+                                dateTo={education.dateToString} />
                         })
                     }
                 </div>
