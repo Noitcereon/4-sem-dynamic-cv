@@ -1,15 +1,28 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import ContactInfo from "./ContactInfo";
+import { fetchPersonalItems } from "../actions";
+//import ContactInfo from "./ContactInfo";
 
 class SideBar extends Component {
+    componentDidMount() {
+        this.props.fetchPersonalItems();
+    }
     render() {
         return (
             <div>
                 <div id="sidebar-header">
-                    <h1>Thomas B. Andersen</h1>
+                    <h1>{this.props.personalInfo.name}</h1>
                 </div>
-               <ContactInfo/>
+                <section>
+                <div className="section-header">
+                    <h2>Contact</h2>
+                </div>
+                <div className="section-content">
+                    <b>Address:</b> {this.props.personalInfo.address}<br />
+                    <b>Phone:</b> {this.props.personalInfo.phone}<br />
+                    <b>E-mail:</b> {this.props.personalInfo.email}<br />
+                </div>
+            </section>
                 <section>
                     <div className="section-header">
                         <h2>Skills</h2>
@@ -24,13 +37,16 @@ class SideBar extends Component {
                         </ul>
                     </div>
                 </section>
-            </div>
-        )
-    }
+            </div> 
+        )}
 }
 
 // const mapStateToProps = () => {
 
 // }
 
-export default connect()(SideBar);
+const mapStateToProps = (state) => {
+    return { personalInfo: state.PersonalInfo }
+}
+
+export default connect(mapStateToProps, {fetchPersonalItems})(SideBar)
