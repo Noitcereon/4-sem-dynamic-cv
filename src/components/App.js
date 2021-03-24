@@ -11,8 +11,9 @@ class App extends Component {
             <BrowserRouter>
                 <div className="container">
                     <Switch>
+                        <Route exact path="/" component={CV}></Route>
                         <Route exact path="/pages/cv" component={CV} />
-                        <Route path="/pages/printable_cv" component={PrintableCV} />
+                        <Route exact path="/pages/printable_cv" component={PrintableCV} />
                     </Switch>
 
                     <footer>

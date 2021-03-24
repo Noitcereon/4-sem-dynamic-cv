@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import SideBar from '../SideBar';
-import WorkItem from '../WorkItem';
 import EducationList from '../EducationList';
+import WorkList from '../WorkList';
 // import {fetchEducationItems} from '../../actions';
 
 class PrintableCV extends Component {
@@ -26,8 +26,7 @@ class PrintableCV extends Component {
                             <h2>Work Experience</h2> 
                         </div>
                         {/* Retrieve WorkItems from api. (the WorkItems below simulates it) */}
-                        <WorkItem />
-                        <WorkItem />
+                        <WorkList/>
                     </section>
                 </main>
             </div>
