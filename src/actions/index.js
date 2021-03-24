@@ -7,4 +7,9 @@ export const fetchEducationItems = () => async dispatch => {
     dispatch({ type: "FETCH_EDUCATION_ITEMS", payload: respose.data })
 };
 
+export const fetchWorkItems = () => async dispatch => {
+    const respose = await cvApi.get("CVItems/cat/WorkItem/");
+    dispatch({ type: "FETCH_WORK_ITEMS", payload: respose.data })
+};
+
 // export default fetchEducationItems
