@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchPersonalItems } from "../actions";
+import { fetchPersonalInfo } from "../actions";
 //import ContactInfo from "./ContactInfo";
 
 class SideBar extends Component {
     componentDidMount() {
-        this.props.fetchPersonalItems();
+        this.props.fetchPersonalInfo();
     }
     render() {
         return (
@@ -18,7 +18,7 @@ class SideBar extends Component {
                     <h2>Contact</h2>
                 </div>
                 <div className="section-content">
-                    <b>Address:</b> {this.props.personalInfo.address}<br />
+                    <b>Address:</b> {this.props.personalInfo.adresse}<br />
                     <b>Phone:</b> {this.props.personalInfo.phone}<br />
                     <b>E-mail:</b> {this.props.personalInfo.email}<br />
                 </div>
@@ -49,4 +49,4 @@ const mapStateToProps = (state) => {
     return { personalInfo: state.PersonalInfo }
 }
 
-export default connect(mapStateToProps, {fetchPersonalItems})(SideBar)
+export default connect(mapStateToProps, {fetchPersonalInfo})(SideBar)

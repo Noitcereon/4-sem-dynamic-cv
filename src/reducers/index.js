@@ -25,9 +25,9 @@ const fetchWorkItems = (state = [], action) => {
     };
 };
 
-const fetchPersonalItems = (state = [], action) => {
+const fetchPersonalInfo = (state = [], action) => {
     switch (action.type) {
-        case 'FETCH_PERSONAL_ITEMS':
+        case 'FETCH_PERSONAL_INFO':
             return action.payload;
         default:
             return state;
@@ -37,6 +37,6 @@ const fetchPersonalItems = (state = [], action) => {
 export default combineReducers({
     EducationItems: fetchEducationItems,
     WorkItems: fetchWorkItems,
-    PersonalItems: fetchPersonalItems
+    PersonalInfo: fetchPersonalInfo
 });
 
