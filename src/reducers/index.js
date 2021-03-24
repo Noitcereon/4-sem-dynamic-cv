@@ -16,8 +16,17 @@ const fetchEducationItems = (state = [], action) => {
     };
 };
 
+const fetchWorkItems = (state = [], action) => {
+    switch (action.type) {
+        case 'FETCH_WORK_ITEMS':
+            return action.payload;
+        default:
+            return state;
+    };
+};
+
 export default combineReducers({
-    EducationItems: fetchEducationItems
-    
+    EducationItems: fetchEducationItems,
+    WorkItems: fetchWorkItems
 });
 

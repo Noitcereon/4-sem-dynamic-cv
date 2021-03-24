@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import SideBar from '../SideBar';
-import WorkItem from '../WorkItem';
+// import WorkItem from '../WorkItem';
 import EducationList from '../EducationList';
 import { fetchEducationItems } from '../../actions';
+import WorkList from '../WorkList';
 
 class CV extends Component {
     componentDidMount() {
@@ -32,8 +33,7 @@ class CV extends Component {
                             <button className="btn btn-primary">+</button>
                         </div>
                         {/* Retrieve WorkItems from database. (the WorkItems below simulates it) */}
-                        <WorkItem />
-                        <WorkItem />
+                        <WorkList />
                     </section>
                 </main>
             </div>
