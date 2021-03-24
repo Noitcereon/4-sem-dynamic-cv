@@ -1,25 +1,24 @@
-import React, { component } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { fetchEducationItems } from "../actions";
+import EducationItem from "./EducationItem";
 
 class EducationList extends Component {
-    render() {
+    componentDidMount() {
+        this.props.fetchEducationItems();
+    }
+    render() {  
         return (
             <div>
-                <h2>Education</h2>
                 <div className="row work-item">
                     {
-                        this.prop.educations.map(education => {
-                            return <div>
-                                <EducationItem ></EducationItem>
-                                
-                            </div>
-
-
-
-
-                        }
+                        this.props.educations.map(education => {
+                            return <EducationItem key={education.id} title={education.title}
+                                location={education.location}
+                                description={education.description}
+                                dateFrom={education.dateFrom}
+                                dateTo={education.dateTo} />
+                        })
                     }
                 </div>
             </div>
@@ -30,3 +29,5 @@ class EducationList extends Component {
 const mapStateToProps = (state) => {
     return { educations: state.EducationItems }
 }
+
+export default connect(mapStateToProps, { fetchEducationItems })(EducationList)

@@ -11,12 +11,12 @@ class App extends Component {
             <BrowserRouter>
                 <div className="container">
                     <Switch>
-                        <Route exact path="/pages/" component={CV} />
+                        <Route exact path="/pages/cv" component={CV} />
                         <Route path="/pages/printable_cv" component={PrintableCV} />
                     </Switch>
 
                     <footer>
-                        <Link to="/pages/">Manage CV</Link>
+                        <Link to="/pages/cv">Manage CV</Link>
                         <Link to="/pages/printable_cv">Show Printable Version</Link>
                     </footer>
                 </div>

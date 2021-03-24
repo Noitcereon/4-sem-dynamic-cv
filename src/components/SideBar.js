@@ -29,8 +29,8 @@ class SideBar extends Component {
     }
 }
 
-const mapStateToProps = () => {
+// const mapStateToProps = () => {
 
-}
+// }
 
-export default connect(mapStateToProps)(SideBar);
+export default connect()(SideBar);

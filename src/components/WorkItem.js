@@ -22,8 +22,8 @@ const workItem = () => {
         </div>
     )};
 
-const mapStateToProps = (state) => {
+// const mapStateToProps = (state) => {
     
-}
+// }
 
-export default connect(mapStateToProps)(workItem);
+export default connect()(workItem);

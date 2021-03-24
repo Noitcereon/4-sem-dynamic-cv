@@ -2,29 +2,26 @@ import React from "react";
 import { connect } from "react-redux";
 
 
-const educationItem = () => {
+const educationItem = (props) => {
     return (
         <div className="row work-item">
             <div className="col-md-3">
-                09/2019 -
-                Current
-        </div>
+                {props.dateFrom}-
+                {props.dateTo}
+            </div>
             <div className="col-md-9">
-                <h3>Datamatiker </h3>
-                <h4>Zealand Academy, Roskilde</h4>
-                <ul>
-                    <li>Talking</li>
-                    <li>Chatting</li>
-                    <li>Conversing</li>
-                    <li>Monologing</li>
-                </ul>
+                <h3>{props.title} </h3>
+                <h4>{props.location}</h4>
+                <div>
+                    {props.description}
+                </div>
             </div>
         </div>
     );
 }
 
-const mapStateToProps = () => {
-    
-}
+// const mapStateToProps = () => {
 
-export default connect(mapStateToProps)(educationItem);
+// }
+
+export default connect()(educationItem);

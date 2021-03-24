@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import SideBar from '../SideBar';
 import WorkItem from '../WorkItem';
-import EducationItem from '../EducationItem';
+import EducationList from '../EducationList';
 // import {fetchEducationItems} from '../../actions';
 
 class PrintableCV extends Component {
@@ -18,15 +18,14 @@ class PrintableCV extends Component {
                         <div className="row main-header">
                             <h2>Education</h2>
                         </div>
-                        {/* Retrieve EducationItems from database. (the EducationItems below simulates it) */}
-                        <EducationItem />
-                        <EducationItem />
+                        {/* Retrieve EducationItems from api. */}
+                        <EducationList/>
                     </section>
                     <section>
                         <div className="row main-header">
                             <h2>Work Experience</h2> 
                         </div>
-                        {/* Retrieve WorkItems from database. (the WorkItems below simulates it) */}
+                        {/* Retrieve WorkItems from api. (the WorkItems below simulates it) */}
                         <WorkItem />
                         <WorkItem />
                     </section>
@@ -36,10 +35,10 @@ class PrintableCV extends Component {
     }
 }
 
-const mapStateToProps = () => {
+// const mapStateToProps = () => {
 
-}
+// }
 
-export default connect(mapStateToProps)(PrintableCV);
+export default connect()(PrintableCV);
 
 

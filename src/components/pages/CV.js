@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import SideBar from '../SideBar';
 import WorkItem from '../WorkItem';
-import EducationItem from '../EducationItem';
+import EducationList from '../EducationList';
 import { fetchEducationItems } from '../../actions';
 
 class CV extends Component {
@@ -24,8 +24,7 @@ class CV extends Component {
                             <h2>Education</h2>
                         </div>
                         {/* Retrieve EducationItems from database. (the EducationItems below simulates it) */}
-                        <EducationItem />
-                        <EducationItem />
+                        <EducationList/>
                     </section>
                     <section>
                         <div className="row main-header">
