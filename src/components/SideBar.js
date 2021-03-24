@@ -9,20 +9,20 @@ class SideBar extends Component {
                     <h1>Thomas B. Andersen</h1>
                 </div>
                 <section>
-                    <div class="section-header">
+                    <div className="section-header">
                         <h2>Contact</h2>
                     </div>
-                    <div class="section-content">
+                    <div className="section-content">
                         <b>Address:</b> Hedeboparken 4 1. 213, 4000 Roskilde<br />
                         <b>Phone:</b> +45 60 90 20 17<br />
                         <b>E-mail:</b> tba@live.dk<br />
                     </div>
                 </section>
                 <section>
-                    <div class="section-header">
+                    <div className="section-header">
                         <h2>Skills</h2>
                     </div>
-                    <div class="section-content">
+                    <div className="section-content">
                         <ul>
                             <li>Skill 1</li>
                             <li>C#</li>

@@ -4,12 +4,12 @@ import { connect } from "react-redux";
 
 const educationItem = () => {
     return (
-        <div class="row work-item">
-            <div class="col-md-3">
+        <div className="row work-item">
+            <div className="col-md-3">
                 09/2019 -
                 Current
         </div>
-            <div class="col-md-9">
+            <div className="col-md-9">
                 <h3>Datamatiker </h3>
                 <h4>Zealand Academy, Roskilde</h4>
                 <ul>
