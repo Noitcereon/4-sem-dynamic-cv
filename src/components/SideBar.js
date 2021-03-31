@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchPersonalInfo } from "../actions";
+import { fetchPersonalInfo, fetchSkills } from "../actions";
+import SkillList from './SkillList';
 //import ContactInfo from "./ContactInfo";
 
 class SideBar extends Component {
     componentDidMount() {
         this.props.fetchPersonalInfo();
+        this.props.fetchSkills();
     }
     render() {
         return (
@@ -28,25 +30,18 @@ class SideBar extends Component {
                         <h2>Skills</h2>
                     </div>
                     <div className="section-content">
-                        <ul>
-                            <li>Skill 1</li>
-                            <li>C#</li>
-                            <li>Skill 2 with more text</li>
-                            <li>Skill 3 with an overly long text</li>
-                            <li>Skill 4 minimum</li>
-                        </ul>
+                        <SkillList skills={this.props.skills}/>
                     </div>
                 </section>
             </div> 
         )}
 }
 
-// const mapStateToProps = () => {
-
-// }
-
 const mapStateToProps = (state) => {
-    return { personalInfo: state.PersonalInfo }
+    return { 
+        personalInfo: state.PersonalInfo,
+        skills: state.Skills
+    }
 }
 
-export default connect(mapStateToProps, {fetchPersonalInfo})(SideBar)
+export default connect(mapStateToProps, {fetchPersonalInfo, fetchSkills})(SideBar)
