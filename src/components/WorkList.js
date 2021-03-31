@@ -13,7 +13,7 @@ class WorkList extends Component {
                 <div className="row work-item">
                     {
                         this.props.works.map(work => {
-                            return <WorkItem key={work.id} titel={work.titel}
+                            return <WorkItem key={work.id} title={work.title}
                             location={work.location}
                             description={work.description}
                             dateFrom={work.dateFromString}

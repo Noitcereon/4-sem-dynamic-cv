@@ -5,14 +5,15 @@ import SideBar from '../SideBar';
 import EducationList from '../EducationList';
 import { fetchEducationItems } from '../../actions';
 import WorkList from '../WorkList';
+import { Link } from "react-router-dom";
+import AddCVItem from "../AddCVItem";
 
 class CV extends Component {
     componentDidMount() {
         this.props.fetchEducationItems();
     }
-
+  
     render() {
-        console.log(this.props.EducationItems) //- lige en test på at dataen kan hentes fra API
         return (
             <div className="row">
                 <section id="sidebar" className="col-md-4">
@@ -23,16 +24,15 @@ class CV extends Component {
                     <section>
                         <div className="row main-header">
                             <h2>Education</h2>
+                            <Link className="btn btn-primary" to="add_cv_item/2">+</Link>
                         </div>
-                        {/* Retrieve EducationItems from database. (the EducationItems below simulates it) */}
                         <EducationList/>
                     </section>
                     <section>
                         <div className="row main-header">
                             <h2>Work Experience</h2>
-                            <button className="btn btn-primary">+</button>
+                            <Link className="btn btn-primary" to="add_cv_item/1">+</Link>
                         </div>
-                        {/* Retrieve WorkItems from database. (the WorkItems below simulates it) */}
                         <WorkList />
                     </section>
                 </main>

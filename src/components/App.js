@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import CV from './pages/CV';
 import PrintableCV from "./pages/PrintableCV";
+import AddCVItem from "./AddCVItem";
+import AddSkill from "./pages/AddSkill";
 
 
 class App extends Component {
@@ -14,6 +16,8 @@ class App extends Component {
                         <Route exact path="/" component={CV}></Route>
                         <Route exact path="/pages/cv" component={CV} />
                         <Route exact path="/pages/printable_cv" component={PrintableCV} />
+                        <Route path="/pages/add_cv_item/:id" component={AddCVItem} />
+                        <Route path="/pages/add_skill" component={AddSkill} />
                     </Switch>
 
                     <footer>

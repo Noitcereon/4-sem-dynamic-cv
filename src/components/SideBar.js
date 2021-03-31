@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchPersonalInfo, fetchSkills } from "../actions";
+import { Link } from "react-router-dom";
 import SkillList from './SkillList';
 //import ContactInfo from "./ContactInfo";
 
@@ -27,7 +28,8 @@ class SideBar extends Component {
             </section>
                 <section>
                     <div className="section-header">
-                        <h2>Skills</h2>
+                        <h2>Skills <Link className="btn btn-primary" to="add_skill">+</Link></h2>   
+                        
                     </div>
                     <div className="section-content">
                         <SkillList skills={this.props.skills}/>
