@@ -17,3 +17,8 @@ export const fetchPersonalInfo = () => async dispatch => {
     dispatch({ type: "FETCH_PERSONAL_INFO", payload: respose.data })
 };
 
+export const fetchSkills = () => async dispatch => {
+    const respose = await cvApi.get("Skill/");
+    dispatch({ type: "FETCH_SKILLS", payload: respose.data })
+};
+
