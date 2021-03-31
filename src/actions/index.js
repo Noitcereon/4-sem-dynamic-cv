@@ -1,5 +1,3 @@
-// action creater stuff
-
 import cvApi from "../apis/cv-api";
 
 export const fetchEducationItems = () => async dispatch => {
@@ -21,4 +19,15 @@ export const fetchSkills = () => async dispatch => {
     const respose = await cvApi.get("Skill/");
     dispatch({ type: "FETCH_SKILLS", payload: respose.data })
 };
-
+// export const postSkill = (skillData) => async (dispatch) => {
+//     const respose = await cvApi.post("Skill/", skillData)
+//     .then(() => {
+//         console.log(respose.data);
+//         dispatch({ type: "POST_SKILL"});
+//         return;
+//     })
+//     .catch((e) => {
+//         console.log(respose.data);
+//         console.log(e);
+//     })
+// };
