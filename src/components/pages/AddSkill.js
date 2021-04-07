@@ -3,23 +3,23 @@ import { connect } from "react-redux";
 import { postSkill } from "../../actions";
 
 class AddSkill extends Component {
-    componentDidMount(){
-        this.props.skillDescription = "";
-    }
+    SkillDescription = "";
     postNewSkill() {
-        console.log(this.props.skillDescription);
-        postSkill(this.props.skillDescription);
-        window.location.assign("http://localhost:3000/");
+        postSkill(this.SkillDescription);
+        // window.location.assign("http://localhost:3000/");
     }
+
     render() {
-        return(
-        <section>
-            <form>
-                <label>Skill</label>
-                <input className="form-control" type="text" value={this.props.skillDescription} />
-                <button className="form-control" type="submit" onClick={this.postNewSkill()}>Submit</button>
-            </form>
-        </section>
+        
+
+        return (
+            <section>
+                <form>
+                    <label>Skill</label>
+                    <input className="form-control" type="text" value={this.SkillDescription} />
+                    <button className="form-control" type="submit" onClick={this.postNewSkill()}>Submit</button>
+                </form>
+            </section>
         )
     }
 }
