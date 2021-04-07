@@ -1,7 +1,10 @@
 
-const postSkill = (action) => {
+const postSkill = (state=[], action) => {
     if(action.type === "POST_SKILL"){
-        return;
+        
+    }
+    else{
+        return state;
     }
 }
 

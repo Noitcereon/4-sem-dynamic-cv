@@ -11,6 +11,6 @@ export default combineReducers({
     WorkItems: fetchWorkItems,
     PersonalInfo: fetchPersonalInfo,
     Skills: fetchSkills,
-    // PostSkill: postSkill
+    PostSkill: postSkill
 });
 
