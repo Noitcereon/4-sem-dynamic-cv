@@ -4,14 +4,12 @@ import { postSkill } from "../../actions";
 
 class AddSkill extends Component {
     SkillDescription = "";
+
     postNewSkill() {
         postSkill(this.SkillDescription);
-        // window.location.assign("http://localhost:3000/");
     }
 
     render() {
-        
-
         return (
             <section>
                 <form>
