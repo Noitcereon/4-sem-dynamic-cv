@@ -3,19 +3,24 @@ import { connect } from "react-redux";
 import { postSkill } from "../../actions";
 
 class AddSkill extends Component {
-    SkillDescription = "";
-
+    SkillDescription;
+    constructor(props){
+        super(props);
+        this.SkillDescription = "This is apparently read only..."
+    }
     postNewSkill() {
         postSkill(this.SkillDescription);
     }
-
+    setSkillDescription(value){
+        this.SkillDescription = value;
+    }
     render() {
         return (
             <section>
                 <form>
-                    <label>Skill</label>
-                    <input className="form-control" type="text" value={this.SkillDescription} />
-                    <button className="form-control" type="submit" onClick={this.postNewSkill()}>Submit</button>
+                    <label className="text-light">Skill</label>
+                    <input className="form-control" type="text" value={this.SkillDescription} onChange={e => this.setSkillDescription(e.target.value)}/>
+                    <button className="form-control" type="submit" onClick={this.postNewSkill}>Submit</button>
                 </form>
             </section>
         )
