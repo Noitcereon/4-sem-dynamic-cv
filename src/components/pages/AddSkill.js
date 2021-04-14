@@ -6,13 +6,15 @@ class AddSkill extends Component {
     SkillDescription;
     constructor(props){
         super(props);
-        this.SkillDescription = "This is apparently read only..."
     }
     postNewSkill() {
+        console.log("postNewSkill was called.");
         postSkill(this.SkillDescription);
     }
     setSkillDescription(value){
+        console.log("setSkillDescription was called.");
         this.SkillDescription = value;
+        console.log(this.SkillDescription);
     }
     render() {
         return (
